@@ -16,7 +16,7 @@
           id="knob"
           v-show="showKnob"
           :src="Img.knob"
-          style="position: absolute; top: 0px; height: 100%"
+          style="position: absolute; top: 0px; height: 100%; z-index: 1;"
         />
         <img
           id="knobModule"
@@ -250,7 +250,7 @@ const case_color = ref("Case_SE_IceBlue");
 const weight_color = ref("Weight_PVD_Silver");
 const module = ref("Screen");
 const knob_color = ref("Knob_PVD_Silver");
-const knob_module_color = ref("Knob_Modeule_SE_IceBlue");
+const knob_module_color = ref("Knob_Module_SE_IceBlue");
 const double_key_color = ref("Key_SE_IceBlue");
 window.onload = () => {
   Img.case = "./Case/Zoom98_SE_IceBlue.png";
@@ -281,19 +281,16 @@ const update_knob = () => {
 const update_module = (value: string) => {
   switch(value) {
     case "Screen":
-      console.log("Screen")
       showScreen.value = true;
       showKnob.value = false;
       showDoubleKey.value = false;
       break;
     case "Knob":
-      console.log("Knob")
       showScreen.value = false;
       showKnob.value = true;
       showDoubleKey.value = false;
       break;
     case "Double Key":
-      console.log("Double Key")
       showScreen.value = false;
       showKnob.value = false;
       showDoubleKey.value = true;
@@ -566,119 +563,119 @@ const default_dict = {
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_SE_Black",
-      "knobModule":"Knob_Modeule_SE_Black",
+      "knobModule":"Knob_Module_SE_Black",
       "knob":"Knob_Ano_Gold"
   },
   "Case_SE_eWhite":
   {
       "weight": "Weight_Ano_Pink",
       "key": "Key_SE_eWhite",
-      "knobModule":"Knob_Modeule_SE_White",
+      "knobModule":"Knob_Module_SE_White",
       "knob":"Knob_eWhite"
   },
   "Case_SE_GTSilver":
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_SE_GTSilver",
-      "knobModule":"Knob_Modeule_SE_GTSilver",
+      "knobModule":"Knob_Module_SE_GTSilver",
       "knob":"Knob_PVD_Silver"
   },
   "Case_SE_IceBlue":
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_SE_IceBlue",
-      "knobModule":"Knob_Modeule_SE_IceBlue",
+      "knobModule":"Knob_Module_SE_IceBlue",
       "knob":"Knob_PVD_Silver"
   },
   "Case_SE_Lavender":
   {
       "weight": "Weight_PVD_Prism",
       "key": "Key_SE_Lavender",
-      "knobModule":"Knob_Modeule_SE_Lavender",
+      "knobModule":"Knob_Module_SE_Lavender",
       "knob":"Knob_Ano_Pink"
   },
   "Case_SE_Orange":
   {
       "weight": "Weight_PVD_Gold",
       "key": "Key_SE_Orange",
-      "knobModule":"Knob_Modeule_SE_Orange",
+      "knobModule":"Knob_Module_SE_Orange",
       "knob":"Knob_PVD_Gold"
   },
   "Case_EE_Black":
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_EE_Black",
-      "knobModule":"Knob_Modeule_EE_Black",
+      "knobModule":"Knob_Module_EE_Black",
       "knob":"Knob_Ano_Pink"
   },
   "Case_EE_BlushPink":
   {
       "weight": "Weight_Ano_Pink",
       "key": "Key_EE_BlushPink",
-      "knobModule":"Knob_Modeule_EE_BlushPink",
+      "knobModule":"Knob_Module_EE_BlushPink",
       "knob":"Knob_Ano_Pink"
   },
   "Case_EE_CoolGrey":
   {
       "weight": "Weight_PVD_Black",
       "key": "Key_EE_CoolGrey",
-      "knobModule":"Knob_Modeule_EE_CoolGrey",
+      "knobModule":"Knob_Module_EE_CoolGrey",
       "knob":"Knob_PVD_Black"
   },
   "Case_EE_CyberYellow":
   {
       "weight": "Weight_Ano_Black",
       "key": "Key_EE_CyberYellow",
-      "knobModule":"Knob_Modeule_EE_CyberYellow",
+      "knobModule":"Knob_Module_EE_CyberYellow",
       "knob":"Knob_Ano_Black"
   },
   "Case_EE_Lilac":
   {
       "weight": "Weight_Ano_RoseGold",
       "key": "Key_EE_Lilac",
-      "knobModule":"Knob_Modeule_EE_Lilac",
+      "knobModule":"Knob_Module_EE_Lilac",
       "knob":"Knob_PVD_Prism"
   },
   "Case_EE_MilkTea":
   {
       "weight": "Weight_Ano_Gold",
       "key": "Key_EE_MilkTea",
-      "knobModule":"Knob_Modeule_EE_MilkTea",
+      "knobModule":"Knob_Module_EE_MilkTea",
       "knob":"Knob_Ano_Gold"
   },
   "Case_EE_MilkyGreen":
   {
       "weight": "Weight_Ano_Gold",
       "key": "Key_EE_MilkyGreen",
-      "knobModule":"Knob_Modeule_EE_MilkyGreen",
+      "knobModule":"Knob_Module_EE_MilkyGreen",
       "knob":"Knob_eWhite"
   },
   "Case_EE_Navy":
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_EE_Navy",
-      "knobModule":"Knob_Modeule_EE_Navy",
+      "knobModule":"Knob_Module_EE_Navy",
       "knob":"Knob_Ano_RoseGold"
   },
   "Case_EE_Plum":
   {
       "weight": "Weight_PVD_Silver",
       "key": "Key_EE_Plum",
-      "knobModule":"Knob_Modeule_EE_Plum",
+      "knobModule":"Knob_Module_EE_Plum",
       "knob":"Knob_eWhite"
   },
   "Case_EE_ScarletRed":
   {
       "weight": "Weight_eWhite",
       "key": "Key_EE_ScarletRed",
-      "knobModule":"Knob_Modeule_EE_ScarletRed",
+      "knobModule":"Knob_Module_EE_ScarletRed",
       "knob":"Knob_eWhite"
   },
   "Case_EE_SkyBlue":
   {
       "weight": "Weight_eWhite",
       "key": "Key_EE_SkyBlue",
-      "knobModule":"Knob_Modeule_EE_SkyBlue",
+      "knobModule":"Knob_Module_EE_SkyBlue",
       "knob":"Knob_eWhite"
   },
   "Case_EE_StrawberryIcecream":
@@ -692,14 +689,14 @@ const default_dict = {
   {
       "weight": "Weight_PVD_Gold",
       "key": "Key_EE_White",
-      "knobModule":"Knob_Modeule_EE_White",
+      "knobModule":"Knob_Module_EE_White",
       "knob":"Knob_Ano_Gold"
   },
   "Case_EE_WildGreen":
   {
       "weight": "Weight_Ano_Gold",
       "key": "Key_EE_WildGreen",
-      "knobModule":"Knob_Modeule_EE_WildGreen",
+      "knobModule":"Knob_Module_EE_WildGreen",
       "knob":"Knob_Ano_Gold"
   },
 };
